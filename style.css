@@ -25,14 +25,14 @@ button{
 
 #grid{
 	display: flex;
-	background: whitesmoke;
+	background-color: whitesmoke;
 	padding: 0;
 	margin: 20px;
 }
 
 .grid-content{
-	border: 1px solid grey;
-	height: 32px;
-	width:32px;
+	border: 1px solid black;
+	width: 40px;
+	height: 40px;
 }
 
