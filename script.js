@@ -22,8 +22,10 @@ function fillBoard(numOfgrid){
 function hoverFilling(event){
 	if (event.target.classList.contains("grid-content")) {
         event.target.style.backgroundColor = "#000";
+        
     }
 }
+
 
 function setNewBoard(){
 	button.addEventListener("click", () => {
