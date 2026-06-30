@@ -1,0 +1,38 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fed;
+	height: 100vh;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+	margin-top:20px;
+	background: none;
+	background-color: grey;
+	padding: 5px 32px;
+	font-size: 24px;
+	border-radius: 10px;
+	color: white;
+}
+
+#grid{
+	display: flex;
+	background: whitesmoke;
+	padding: 0;
+	margin: 20px;
+}
+
+.grid-content{
+	border: 1px solid grey;
+	height: 32px;
+	width:32px;
+}
+
