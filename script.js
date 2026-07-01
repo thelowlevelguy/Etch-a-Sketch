@@ -21,9 +21,22 @@ function fillBoard(numOfgrid){
 
 function hoverFilling(event){
 	if (event.target.classList.contains("grid-content")) {
-        event.target.style.backgroundColor = "#000";
+     
+        const currBackground = window.getComputedStyle(event.target).getPropertyValue("--background_color")
+        const currentRgba = parseColor(currBackground)
         
+        //the last value represent the opacity in rgba
+        //by multiplying a string to 1 it will be a number
+    	const background = `rgba(0, 0, 0, ${Math.min(currentRgba[3] * 1 + 0.1, 1)})`;
+    	event.target.style.setProperty("--background_color", background);
     }
+}
+
+function parseColor(color) {
+ const m = color.match(/^rgba\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*((0.)?\d+)\s*\)$/i);
+  if( m) {
+     return [m[1], m[2], m[3], m[4]];
+  }
 }
 
 
@@ -39,6 +52,5 @@ function setNewBoard(){
 fillBoard(DEFAULT_GRID_SIZE)
 setNewBoard()
 
-
-grid.addEventListener('mouseover', hoverFilling)
+grid.addEventListener('mouseout', hoverFilling)
 		

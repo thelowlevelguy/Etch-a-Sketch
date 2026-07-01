@@ -29,12 +29,16 @@ button{
 	padding: 0;
 	margin: 20px;
 	box-shadow: 1px 1px 10px grey;
-
 }
 
 .grid-content{
 	width: 40px;
 	height: 40px;
-	box-shadow: 2px 2px black;
+	background-color: var(--background_color);
 }
 
+
+
+:root{
+	--background_color : rgba(0, 0, 0, 0);
+}
